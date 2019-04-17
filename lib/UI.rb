@@ -13,14 +13,20 @@ class UI
   end
 
   def see_board
-    format_for_output
-    b = @board.each_slice(3).to_a
-    b.each do |element|
+    fill_fields
+    format
+  end
+
+  private
+
+  def format
+    board = @board.each_slice(3).to_a
+    board.each do |element|
       p element.join
     end
   end
 
-  def format_for_output
+  def fill_fields
     @board_model.fields.each do |_key, value|
       n = 1
       while n < 4

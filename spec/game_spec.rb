@@ -1,18 +1,10 @@
 # frozen_string_literal: true
 
-require 'game'
+# require 'game'
 
 RSpec.describe Game do
   subject(:game) { described_class.new('Bob', 'Jon', board) }
   let (:board) { instance_double('Board', fields: { 'A' => { 1 => nil, 2 => 'X', 3 => nil }, 'B' => { 1 => nil, 2 => nil, 3 => nil }, 'C' => { 1 => nil, 2 => nil, 3 => nil } }) }
-
-  #   before(:each) do
-  #   allow(@board).to receive(:fields).and_return(@fields)
-  # end
-
-  # before do
-  #   allow(board).to receive(:fields)
-  # end
 
   it '2 players play' do
     expect(game.player1).to eq('Bob')

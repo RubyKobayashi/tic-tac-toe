@@ -27,7 +27,7 @@ RSpec.describe 'TicTacToe' do
     game.play('A1')
     expect(game.turn).to eq('Jon')
   end
-
+ 
   # As a player
   # In order to ensure that you cannot claim a taken field
   # Id like to only be able to claim a field if it is not taken

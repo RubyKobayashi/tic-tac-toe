@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'board'
+# require 'board'
 
 RSpec.describe Board do
   subject(:board) { described_class.new }
